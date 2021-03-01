@@ -1,0 +1,46 @@
+INSERT INTO addresses (city, address) VALUES
+('Odesa', 'Levitana 79'),
+('Odesa', 'Preobrazhenska 22'),
+('Odesa', 'Mahachkalinska 35'),
+('Lviv', 'Bandery 1'),
+('Lviv', 'Lesenko 11'),
+('Kyiv', 'Sofiivska 17'),
+('Kyiv', 'Pushkinska 81');
+
+INSERT INTO users (name, email, phone, password, working_day_type, salary, salary) VALUES
+('Pogorelov Alex', '380980841385', '123456789', 1, 1000),
+('Samaylov Roman', '380980841386', '123456789', 1, 1000),
+('Tatiaina Yulia', '380980841387', '123456789', 1, 750),
+('Salamaha Yulia', '380980841388', '123456789', 1, 850),
+('Strongman Slava', '380980841389', '123456789', 2, 900),
+('Samaylova Ludmila', '380980841375', '123456789', 2, 1000),
+('Kulchitskaya Valentina', '380980841376', '123456789', 2, 900),
+('Salamaha Olesya', '380980841377', '123456789', 2, 850),
+('Kompanitsa Igor', '380980841378', '123456789', 3, 1100),
+('Doniev Stanislav', '380980841379', '123456789', 3, 950),
+('Shtan Anastasia', '380980841360', '123456789', 3, 1000),
+('Rozhkovskaya Tatiana', '380980841361', '123456789', 3, 850),
+('Zhyrun Karerina', '3809808413862', '123456789', 4, 1000),
+('Doniev Nikolay', '380980841363', '123456789', 4, 1150),
+('Bulgar Artur', '380980841364', '123456789', 4, 1000),
+('Runa Olga', '380980841365', '123456789', 4, 850),
+('Kozhanov Igor', '380980841366', '123456789', 4, 900),
+('Shuliak Katerina', '380980841367', '123456789', 5, 900),
+('Panasov Denis', '380980841368', '123456789', 5, 850),
+('Runa Valentin', '380980841369', '123456789', 5, 900),
+('Olkin Olga', '380980841322', '123456789', 5, 950),
+('Egorkin Andrei', '380980841311', '123456789', 6, 900),
+('Sailor Sophie', '380980841312', '123456789', 6, 950),
+('Klas Marina', '380980841313', '123456789', 6, 900),
+('Moisenko Stas', '380980841314', '123456789', 6, 950),
+('Raketskii Maksim', '380980841315', '123456789', 6, 900),
+('Bondarenko Dmitrii', '380980841316', '123456789', 7, 1100),
+('Maksicha Maria', '380980841317', '123456789', 7, 1150),
+('Alexandr Safo', '380980841318', '123456789', 7, 900),
+('Kasnovetskii Andrei', '380980841319', '123456789', 7, 950);
+
+INSERT INTO subscriptions (price, term) VALUES
+(15, 1),
+(29, 2),
+(50, 4),
+(70, 6);
