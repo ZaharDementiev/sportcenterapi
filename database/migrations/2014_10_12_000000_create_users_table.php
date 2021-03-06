@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->bigInteger('staff_account_id');
             $table->smallInteger('working_day_type');
             $table->bigInteger('salary');
             $table->timestamp('email_verified_at')->nullable();

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Address;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +30,13 @@ Route::post('/make/sub', 'App\Http\Controllers\SubscriptionController@make')->na
 Route::get('/gyms/{id}', 'App\Http\Controllers\AddressController@choose')->name('choose.gym');
 Route::get('/trainers/{id}', 'App\Http\Controllers\MoneyController@make')->name('choose.trainer');
 
+Route::get('test', function () {
+    $gyms = Address::all();
+    $addresses = [];
+    $count = 1;
+    foreach ($gyms as $gym) {
+        $addresses[$count] = $gym->city . ', ' . $gym->address;
+        $count++;
+    }
+    dd($addresses);
+});
