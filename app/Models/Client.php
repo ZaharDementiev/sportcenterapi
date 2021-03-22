@@ -23,11 +23,18 @@ class Client extends Model
     public function userGym()
     {
         $gym = Address::where('id', $this->gym_id)->first();
-        return $gym->city . ', ' . $gym->address;
+        if ($gym) {
+            return $gym->city . ', ' . $gym->address;
+        }
+        return 'Не указано';
     }
 
     public function userTrainer()
     {
-        return User::where('id', $this->trainer_id)->first()->name;
+        $user = User::where('id', $this->trainer_id)->first();
+        if ($user) {
+            return $user->name;
+        }
+        return 'Не указано';
     }
 }

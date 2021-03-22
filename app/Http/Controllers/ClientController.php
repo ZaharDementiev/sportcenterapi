@@ -34,4 +34,11 @@ class ClientController extends Controller
         setcookie(Client::CLIENT, 0, time() + 0, '/');
         return redirect()->back();
     }
+
+    public function setTime(Request $request)
+    {
+        $client = Client::where('id', $_COOKIE[Client::CLIENT])->first();
+        $client->training_time = $request->input('time');
+        return redirect()->route('main');
+    }
 }

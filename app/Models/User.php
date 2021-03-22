@@ -23,6 +23,7 @@ class User extends Authenticatable
 
     public const TRAINER = 0;
     public const MANAGER = 1;
+    public const ADMIN = 2;
 
     public function workingDays()
     {

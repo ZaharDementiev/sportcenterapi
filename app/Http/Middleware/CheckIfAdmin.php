@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class CheckIfAdmin
 {
@@ -28,7 +29,10 @@ class CheckIfAdmin
      */
     private function checkIfUserIsAdmin($user)
     {
-        return $user->hasRole('admin') || $user->hasRole('manager') || $user->hasRole('trainer');
+        if ($user->permission >= 0) {
+            Auth::login($user);
+            return true;
+        }
     }
 
     /**

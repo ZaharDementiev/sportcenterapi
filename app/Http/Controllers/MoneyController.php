@@ -28,6 +28,6 @@ class MoneyController extends Controller
         $sql = "INSERT INTO client_trainer (client_id, trainer_id) VALUES (" . $client->id . ", " . $trainer->id . ")";
         DB::insert($sql);
 
-        return redirect()->route('main');
+        return redirect()->route('time');
     }
 }

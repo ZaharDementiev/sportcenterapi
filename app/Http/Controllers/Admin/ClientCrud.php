@@ -81,6 +81,11 @@ abstract class ClientCrud extends CrudController
                 'label' => 'Следующая оплата',
                 'type' => 'datetime',
             ],
+            [
+                'name' => 'training_time',
+                'label' => 'Время занятия',
+                'type' => 'text',
+            ],
         ]);
         $this->fieldsSetup();
     }

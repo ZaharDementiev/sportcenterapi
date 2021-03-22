@@ -21,6 +21,7 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')->name('main');
 Route::get('/trainers', 'App\Http\Controllers\HomeController@staff')->name('staff');
 Route::get('/pricing', 'App\Http\Controllers\HomeController@pricing')->name('pricing');
 Route::get('/gyms', 'App\Http\Controllers\HomeController@gyms')->name('gyms');
+Route::get('/time', 'App\Http\Controllers\HomeController@time')->name('time');
 
 Route::post('/client/login', 'App\Http\Controllers\ClientController@login')->name('client.login');
 Route::post('/client/register', 'App\Http\Controllers\ClientController@register')->name('client.register');
@@ -29,6 +30,7 @@ Route::get('/client/logout', 'App\Http\Controllers\ClientController@logout')->na
 Route::post('/make/sub', 'App\Http\Controllers\SubscriptionController@make')->name('make.sub');
 Route::get('/gyms/{id}', 'App\Http\Controllers\AddressController@choose')->name('choose.gym');
 Route::get('/trainers/{id}', 'App\Http\Controllers\MoneyController@make')->name('choose.trainer');
+Route::post('/set/time', 'App\Http\Controllers\ClientController@setTime')->name('set.time');
 
 Route::get('test', function () {
     $gyms = Address::all();

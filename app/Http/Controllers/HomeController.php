@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('gyms');
     }
+
+    public function time()
+    {
+        return view('time');
+    }
 }
